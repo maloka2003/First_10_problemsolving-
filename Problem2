@@ -1,0 +1,39 @@
+import java.util.Scanner;
+ 
+ 
+public class Main {
+    public static void main(String[] args) {
+ 
+        Scanner scanner = new Scanner(System.in);
+ 
+        int count_A=0,count_D=0;
+        int n=scanner.nextInt();
+        scanner.nextLine();
+        String S = scanner.nextLine();
+        if (S.length() != n) {
+            System.out.println("The string length input doesn't match n games .");
+            return;
+        }
+        char[] s = S.toCharArray();
+        for(char c : s){
+ 
+            if ( c == 'D') {
+                    count_D++;
+             }
+             else if (c == 'A'){
+                 count_A++;
+ 
+             }
+        }
+ 
+ 
+ 
+        if(count_A>count_D){
+            System.out.println("Anton");
+        }
+        else if (count_A<count_D){
+            System.out.println("Danik");
+        }
+        else{
+            System.out.println(" Friendship");
+        }}}
